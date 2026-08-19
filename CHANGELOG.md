@@ -31,6 +31,7 @@ All notable changes to this project will be documented in this file. The format 
 - Handles are larger, higher contrast, and visible near track edges.
 - WaveSurfer no longer receives a point exactly at the track end, preventing a `NaN` media volume.
 - In full-screen mode, tracks and settings scroll without hiding the status bar.
+- GitHub Actions use current Node.js 24-based action runtimes without deprecation warnings.
 
 ### Known limitations
 

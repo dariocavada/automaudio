@@ -52,6 +52,7 @@ Status: buildable pre-beta implementation with a headless engine, Web Component,
 - WAV export completed in the UI; the browser driver did not intercept the Blob download.
 - Full-viewport playground without an outer centered container: passed.
 - Full-screen playground with five tracks: status bar remained at the bottom and the central workspace stayed within the viewport.
+- Initial GitHub Actions run on `main`: passed; action runtimes were then updated to current v7 releases.
 
 ## Checks still required
 
