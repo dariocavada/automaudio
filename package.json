@@ -1,0 +1,82 @@
+{
+  "name": "@dariocavada/automaudio",
+  "version": "0.1.0",
+  "description": "Reusable browser audio editor with voice-aware automatic ducking.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./element": {
+      "types": "./dist/element.d.ts",
+      "import": "./dist/element.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "readme.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "docs",
+    "skills"
+  ],
+  "sideEffects": [
+    "./dist/element.js"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "vite --config vite.config.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "npm run typecheck && npm run test && npm run build",
+    "prepublishOnly": "npm run check",
+    "pack:check": "npm pack --dry-run"
+  },
+  "keywords": [
+    "audio",
+    "autoducking",
+    "ducking",
+    "wavesurfer",
+    "web-audio",
+    "web-component"
+  ],
+  "author": "Dario Cavada",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dariocavada/automaudio.git"
+  },
+  "homepage": "https://github.com/dariocavada/automaudio#readme",
+  "bugs": {
+    "url": "https://github.com/dariocavada/automaudio/issues"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@mediabunny/mp3-encoder": "^1.55.1",
+    "mediabunny": "^1.55.1",
+    "wavesurfer-multitrack": "^0.4.12"
+  },
+  "peerDependencies": {
+    "wavesurfer.js": "^7.12.11"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vite": "^7.0.0",
+    "vitest": "^3.2.0",
+    "wavesurfer.js": "^7.12.11"
+  }
+}

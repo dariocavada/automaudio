@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+  <body>
+    <automaudio-editor id="editor"></automaudio-editor>
+    <script type="module">
+      import '@dariocavada/automaudio/element'
+
+      const editor = document.querySelector('#editor')
+      editor.addEventListener('automaudio-change', (event) => {
+        localStorage.setItem('my-audio-project', JSON.stringify(event.detail))
+      })
+    </script>
+  </body>
+</html>
