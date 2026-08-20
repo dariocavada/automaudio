@@ -32,6 +32,8 @@ Status: buildable pre-beta implementation with a headless engine, Web Component,
 - Independent vertical scrolling for tracks and settings with a persistent status bar on desktop.
 - English documentation, UI copy, status messages, errors, and test descriptions.
 - GitHub repository metadata and ignored unlicensed local audio fixtures.
+- Internal development-continuity index in `.codex/README.md`, outside the public README and npm package.
+- Self-contained `?demo=1` playground mode and a five-track screenshot for GitHub and npm documentation.
 
 ## Latest successful checks
 
@@ -53,6 +55,7 @@ Status: buildable pre-beta implementation with a headless engine, Web Component,
 - Full-viewport playground without an outer centered container: passed.
 - Full-screen playground with five tracks: status bar remained at the bottom and the central workspace stayed within the viewport.
 - Initial GitHub Actions run on `main`: passed; action runtimes were then updated to current v7 releases.
+- Synthetic five-track demo: loaded successfully, detected 6 voice segments, and rendered ducking handles on four secondary tracks.
 
 ## Checks still required
 
