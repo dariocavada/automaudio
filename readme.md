@@ -79,7 +79,7 @@ npm run dev
 
 Open `http://localhost:5173/?demo=1`, then select **Apply auto ducking**.
 
-![Automaudio editor with five tracks and automatic ducking](https://raw.githubusercontent.com/dariocavada/automaudio/main/.github/assets/automaudio-five-tracks.jpg)
+![Automaudio editor with five tracks and automatic ducking](.github/assets/automaudio-five-tracks.jpg)
 
 The demo audio is generated locally in the browser and is not saved or uploaded.
 
