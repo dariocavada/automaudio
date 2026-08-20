@@ -35,6 +35,12 @@ Record results in `docs/project-status.md` and add specific tasks to `todolist.m
 
 ## Local fixtures and diagnostic
 
+For a self-contained five-track demo using audio generated entirely in the browser, open:
+
+```text
+http://localhost:5173/?demo=1
+```
+
 All contents of `tests/res/` are intentionally ignored by Git. To use the fixture shortcuts, add local files with these names: `test-voice.mp3`, `test-music.mp3`, `test-effect.mp3`, `test-effect2.mp3`, and `test-effect3.mp3`.
 
 ```text

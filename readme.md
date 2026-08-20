@@ -68,6 +68,21 @@ await editor.applyAutoDucking()
 
 Remote URLs must allow CORS requests for both WaveSurfer and Web Audio decoding.
 
+## Example
+
+The included full-screen playground can load five synthetic tracks, apply voice-aware ducking, and display the resulting editable automation envelopes without requiring external audio files.
+
+```bash
+npm install
+npm run dev
+```
+
+Open `http://localhost:5173/?demo=1`, then select **Apply auto ducking**.
+
+![Automaudio editor with five tracks and automatic ducking](.github/assets/automaudio-five-tracks.jpg)
+
+The demo audio is generated locally in the browser and is not saved or uploaded.
+
 ## Headless API
 
 ```js
@@ -122,20 +137,6 @@ The JSON contains settings, tracks, and envelopes, but does not embed audio file
 - With Firebase Storage, store a persistent download URL in the project or resolve an application key through an adapter.
 
 See [docs/api.md](docs/api.md), [docs/architecture.md](docs/architecture.md), and [docs/firebase.md](docs/firebase.md) for details.
-
-## Resuming development
-
-The repository contains persistent documentation designed to make development easy to resume after a break or in a new session:
-
-- [AGENTS.md](AGENTS.md): rules, invariants, and reading order;
-- [docs/project-status.md](docs/project-status.md): current snapshot, completed checks, and next step;
-- [todolist.md](todolist.md): roadmap toward the beta release;
-- [CHANGELOG.md](CHANGELOG.md): added or changed behavior;
-- [docs/decisions](docs/decisions): architecture decisions and rationale;
-- [CONTRIBUTING.md](CONTRIBUTING.md): development workflow;
-- [docs/testing.md](docs/testing.md) and [docs/release.md](docs/release.md): testing and publishing.
-
-At the end of each development session, `docs/project-status.md`, `todolist.md`, and `CHANGELOG.md` should reflect the work that was actually completed.
 
 ## Development
 

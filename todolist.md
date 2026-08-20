@@ -19,6 +19,8 @@
 - [x] Keep the status bar visible and allow tracks and settings to scroll in full-screen mode.
 - [x] Translate documentation, UI copy, messages, and tests into English.
 - [x] Add repository, homepage, and issue tracker metadata to `package.json`.
+- [x] Keep the public README user-focused and move development-continuity notes to `.codex/`.
+- [x] Add a self-contained five-track demo and README screenshot.
 
 ## Before the npm beta
 
