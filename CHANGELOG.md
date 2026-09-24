@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file. The format 
 
 ### Added
 
+- English YouTube tutorial, Short and DCHS Music channel links in the README.
+
 - Generic client deployment instructions and an example Cloudflare configuration.
 
 - Standalone client build and Cloudflare Workers deployment at `automaudio.dchs-music.com`.

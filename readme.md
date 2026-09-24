@@ -28,6 +28,13 @@ or [try the synthetic demo](https://automaudio.dchs-music.com/?demo=1).
 See [Cloudflare deployment](docs/deployment.md) for client build,
 validation, and deployment commands.
 
+## Video tutorials
+
+Watch the English tutorials on [DCHS Music](https://www.youtube.com/@dchs-music):
+
+- [Full tutorial: voice, music and sound effects](https://youtu.be/K5snL2mvdE4) — two examples, from importing tracks and automatic ducking to WAV export.
+- [Quick Short: voice and background music](https://youtube.com/shorts/jwCoPVucGYk) — a simple two-track example with no sound effects.
+
 ## Package installation
 
 ```bash

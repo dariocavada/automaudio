@@ -15,6 +15,7 @@ tests/res/
 /docs/project-status.md
 /docs/release.md
 /docs/cloudflare-deployment.md
+/docs/editorial/
 /wrangler.jsonc
 .env
 .env.*
