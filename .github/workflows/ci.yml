@@ -25,3 +25,5 @@ jobs:
         run: npm run check
       - name: Inspect package contents
         run: npm run pack:check
+      - name: Build and validate public client
+        run: npm run check:client

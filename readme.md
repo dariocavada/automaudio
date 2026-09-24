@@ -1,5 +1,7 @@
 # Automaudio
 
+**[Try the online demo](https://automaudio.dchs-music.com/)**
+
 A multitrack browser audio editor with voice-aware automatic ducking. Voice stays clear while music and effects are lowered only when needed, then return during sufficiently long pauses.
 
 The project provides both a UI-independent TypeScript engine and the `<automaudio-editor>` Web Component, ready to use with JavaScript, React, Vue, Svelte, or a plain HTML page.
@@ -19,7 +21,21 @@ Version `0.1.0` includes a working initial implementation:
 - responsive Web Component and headless API;
 - DAW-style track controls, zoom, navigation buttons, and pan mode.
 
-## Installation
+## Online editor
+
+Open [Automaudio](https://automaudio.dchs-music.com) to use the browser client,
+or [try the synthetic demo](https://automaudio.dchs-music.com/?demo=1).
+See [Cloudflare deployment](docs/deployment.md) for client build,
+validation, and deployment commands.
+
+## Video tutorials
+
+Watch the English tutorials on [DCHS Music](https://www.youtube.com/@dchs-music):
+
+- [Full tutorial: voice, music and sound effects](https://youtu.be/K5snL2mvdE4) — two examples, from importing tracks and automatic ducking to WAV export.
+- [Quick Short: voice and background music](https://youtube.com/shorts/jwCoPVucGYk) — a simple two-track example with no sound effects.
+
+## Package installation
 
 ```bash
 npm install @dariocavada/automaudio wavesurfer.js
@@ -70,18 +86,27 @@ Remote URLs must allow CORS requests for both WaveSurfer and Web Audio decoding.
 
 ## Example
 
-The included full-screen playground can load five synthetic tracks, apply voice-aware ducking, and display the resulting editable automation envelopes without requiring external audio files.
+The included full-screen playground lets you create a mix from multiple audio tracks, such as a voice-over, music, and sound effects. Choose one track as the primary voice and Automaudio will automatically lower the secondary tracks while speech is present, then restore them during longer pauses.
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open `http://localhost:5173/?demo=1`, then select **Apply auto ducking**.
+Open `http://localhost:5173/`, then:
+
+1. Select **Add audio** and load the tracks you want to mix.
+2. Select **Set voice** on the narration or dialogue track. All other tracks are treated as secondary audio.
+3. Adjust the ducking controls. **Voice threshold** determines which parts are detected as speech, **Minimum pause** controls how long the voice must remain silent before the secondary tracks return, and **Low volume** and **High volume** define their ducked and restored levels.
+4. Select **Apply auto ducking** to generate editable volume automation for the secondary tracks.
+5. Change the settings and apply auto ducking again until the automatic result sounds right. You can then drag the automation handles to refine individual volume changes manually.
+6. Use the timeline zoom and Pan mode to navigate the project, and drag audio clips to reposition them in the mix.
+
+To try the interface without supplying audio files, open `http://localhost:5173/?demo=1`. This loads five synthetic tracks and applies the same workflow entirely in your browser.
 
 ![Automaudio editor with five tracks and automatic ducking](.github/assets/automaudio-five-tracks.jpg)
 
-The demo audio is generated locally in the browser and is not saved or uploaded.
+Audio processing is performed locally in the browser; the synthetic demo is generated locally and is not saved or uploaded.
 
 ## Headless API
 
@@ -147,7 +172,7 @@ npm run check
 npm run pack:check
 ```
 
-The local demo is served from `dev/client`. Before publishing to npm, complete the checklist in [todolist.md](todolist.md). The workflow in `.github/workflows/ci.yml` repeats type checking, tests, build, and tarball validation.
+The local demo is served from `dev/client`. The workflow in `.github/workflows/ci.yml` repeats type checking, tests, build, and tarball validation.
 
 Local, non-versioned fixtures can be placed in `tests/res` and loaded automatically during development:
 

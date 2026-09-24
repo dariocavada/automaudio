@@ -6,6 +6,13 @@ All notable changes to this project will be documented in this file. The format 
 
 ### Added
 
+- English YouTube tutorial, Short and DCHS Music channel links in the README.
+
+- Generic client deployment instructions and an example Cloudflare configuration.
+
+- Standalone client build and Cloudflare Workers deployment at `automaudio.dchs-music.com`.
+- Repeatable client output checks and deployment documentation.
+
 - TypeScript ESM package `@dariocavada/automaudio`.
 - Headless `Automaudio` API.
 - `<automaudio-editor>` Web Component.
@@ -26,6 +33,9 @@ All notable changes to this project will be documented in this file. The format 
 
 ### Fixed
 
+- Local audio fixtures and gain diagnostics are excluded from the public client bundle.
+- The production client explicitly registers its editor so bundling cannot remove it.
+
 - The current envelope volume no longer overwrites the manual fader during playback.
 - Playback and export apply `manual volume × automation` exactly once.
 - Handles dragged beyond the vertical edge are restored instead of disappearing.
@@ -33,7 +43,7 @@ All notable changes to this project will be documented in this file. The format 
 - WaveSurfer no longer receives a point exactly at the track end, preventing a `NaN` media volume.
 - In full-screen mode, tracks and settings scroll without hiding the status bar.
 - GitHub Actions use current Node.js 24-based action runtimes without deprecation warnings.
-- Development-continuity notes now live in `.codex/README.md` instead of the public README.
+- Maintainer notes and account-specific deployment configuration are excluded from Git and npm package contents.
 
 ### Known limitations
 
