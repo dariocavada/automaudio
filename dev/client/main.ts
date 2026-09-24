@@ -1,8 +1,10 @@
 import { defineAutomaudioElement } from '../../src/element'
 import { encodeWav } from '../../src/audio/mixer'
 import type { AutomaudioElement } from '../../src/ui/AutomaudioElement'
+import { installVisitAnalytics } from './analytics'
 
 defineAutomaudioElement()
+installVisitAnalytics(document, location.hostname, import.meta.env.PROD)
 
 const previewObjectUrls: string[] = []
 
