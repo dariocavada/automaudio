@@ -11,12 +11,12 @@ npm run dev
 
 ## Workflow
 
-1. Read `AGENTS.md` and `docs/project-status.md`.
-2. Choose a task from `todolist.md`.
+1. Read `AGENTS.md` and `docs/architecture.md`.
+2. Choose an existing GitHub issue or describe the proposed change in a new issue.
 3. Keep the change focused and add relevant tests.
 4. Run `npm run check`.
 5. Verify the playground after every audio or UI change.
-6. Update the project status and changelog before finishing.
+6. Record validation in the pull request and update the changelog when appropriate.
 
 ## API compatibility
 

@@ -1,5 +1,7 @@
 # Automaudio
 
+**[Try the online demo](https://automaudio.dchs-music.com/)**
+
 A multitrack browser audio editor with voice-aware automatic ducking. Voice stays clear while music and effects are lowered only when needed, then return during sufficiently long pauses.
 
 The project provides both a UI-independent TypeScript engine and the `<automaudio-editor>` Web Component, ready to use with JavaScript, React, Vue, Svelte, or a plain HTML page.
@@ -19,7 +21,14 @@ Version `0.1.0` includes a working initial implementation:
 - responsive Web Component and headless API;
 - DAW-style track controls, zoom, navigation buttons, and pan mode.
 
-## Installation
+## Online editor
+
+Open [Automaudio](https://automaudio.dchs-music.com) to use the browser client,
+or [try the synthetic demo](https://automaudio.dchs-music.com/?demo=1).
+See [Cloudflare deployment](docs/deployment.md) for client build,
+validation, and deployment commands.
+
+## Package installation
 
 ```bash
 npm install @dariocavada/automaudio wavesurfer.js
@@ -156,7 +165,7 @@ npm run check
 npm run pack:check
 ```
 
-The local demo is served from `dev/client`. Before publishing to npm, complete the checklist in [todolist.md](todolist.md). The workflow in `.github/workflows/ci.yml` repeats type checking, tests, build, and tarball validation.
+The local demo is served from `dev/client`. The workflow in `.github/workflows/ci.yml` repeats type checking, tests, build, and tarball validation.
 
 Local, non-versioned fixtures can be placed in `tests/res` and loaded automatically during development:
 

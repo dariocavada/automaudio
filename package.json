@@ -22,8 +22,13 @@
     "readme.md",
     "LICENSE",
     "CHANGELOG.md",
-    "docs",
-    "skills"
+    "docs/api.md",
+    "docs/architecture.md",
+    "docs/decisions",
+    "docs/firebase.md",
+    "docs/testing.md",
+    "docs/deployment.md",
+    "skills/automaudio/SKILL.md"
   ],
   "sideEffects": [
     "./dist/element.js"
@@ -36,7 +41,11 @@
     "test:watch": "vitest",
     "check": "npm run typecheck && npm run test && npm run build",
     "prepublishOnly": "npm run check",
-    "pack:check": "npm pack --dry-run"
+    "pack:check": "npm pack --dry-run",
+    "build:client": "vite build --config vite.config.ts",
+    "check:client": "npm run build:client && node scripts/check-client.mjs",
+    "preview:client": "vite preview --config vite.config.ts --port 4173",
+    "deploy": "npm run check:client && wrangler deploy"
   },
   "keywords": [
     "audio",
@@ -77,6 +86,7 @@
     "typescript": "^5.7.2",
     "vite": "^7.0.0",
     "vitest": "^3.2.0",
-    "wavesurfer.js": "^7.12.11"
+    "wavesurfer.js": "^7.12.11",
+    "wrangler": "4.137.0"
   }
 }

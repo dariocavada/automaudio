@@ -1,7 +1,23 @@
 node_modules/
 dist/
+dist-client/
+.wrangler/
 coverage/
 .vite/
 *.tgz
 .DS_Store
 tests/res/
+
+# Local maintainer notes and deployment configuration
+.codex/
+.serena/
+/todolist.md
+/docs/project-status.md
+/docs/release.md
+/docs/cloudflare-deployment.md
+/wrangler.jsonc
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*

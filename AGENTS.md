@@ -4,8 +4,8 @@ This file is the starting point for anyone resuming development, whether human o
 
 ## Reading order
 
-1. Read `docs/project-status.md` to understand what works and the recommended next step.
-2. Read `todolist.md` for the complete roadmap.
+1. Read `CONTRIBUTING.md` for the public development workflow.
+2. Review the relevant GitHub issue. If local maintainer notes `docs/project-status.md` and `todolist.md` exist, read them for session continuity; they are intentionally not distributed.
 3. Read `docs/architecture.md` and the ADRs in `docs/decisions/` before changing structure or data formats.
 4. Consult `docs/api.md` when changing the public API.
 
@@ -35,8 +35,8 @@ npm run dev
 
 At the end of every session that changes the project:
 
-1. update `docs/project-status.md` with status, completed checks, and a concrete next step;
-2. update `todolist.md`, marking only work that is actually complete;
+1. if present locally, update `docs/project-status.md` with status, completed checks, and a concrete next step;
+2. if present locally, update `todolist.md`, marking only work that is actually complete;
 3. update `CHANGELOG.md` when behavior, API, dependencies, or public documentation changes;
 4. add or update tests for every deterministic behavior change;
 5. run `npm run check` and record any checks that were not performed.

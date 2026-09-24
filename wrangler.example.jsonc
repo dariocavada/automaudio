@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "automaudio-client",
+  "compatibility_date": "2026-09-23",
+  "workers_dev": true,
+  "assets": {
+    "directory": "./dist-client",
+    "not_found_handling": "404-page"
+  }
+}

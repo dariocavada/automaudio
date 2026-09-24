@@ -31,7 +31,7 @@ Fixtures must be generated synthetically or have a documented redistribution lic
 | Sources | local file, CORS URL, Firebase Storage |
 | Export | WAV, MP3 |
 
-Record results in `docs/project-status.md` and add specific tasks to `todolist.md` for each reproducible issue.
+Record results in the pull request and open a GitHub issue for each reproducible problem, including steps, expected behavior, browser, and observed result.
 
 ## Local fixtures and diagnostic
 
