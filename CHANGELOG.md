@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file. The format 
 
 ### Added
 
+- Cookie-free Cloudflare visit analytics for the hosted demo only; development and library consumers are excluded.
+
 - English YouTube tutorial, Short and DCHS Music channel links in the README.
 
 - Generic client deployment instructions and an example Cloudflare configuration.

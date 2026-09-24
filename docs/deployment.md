@@ -40,3 +40,20 @@ for account and domain configuration.
 `npm run deploy` builds and validates the client, then uploads `dist-client/`.
 Verify the deployed editor and synthetic demo in a browser. The repository's
 CI validates builds but does not deploy automatically.
+
+## Visit analytics for the hosted demo
+
+The production client loads Cloudflare Web Analytics only on
+`automaudio.dchs-music.com`. Development, preview hosts and the reusable library
+are excluded. The site token is a public identifier, not an API credential.
+The beacon measures visits, page views and performance; there are no custom
+editor events or audio uploads. Cloudflare describes this service as using no
+analytics cookies, localStorage or fingerprinting.
+
+The dedicated Web Analytics site uses manual snippet installation. Keep only
+one beacon on the page; avoid adding automatic zone injection on top of it.
+Build and validate with `npm run check` and `npm run check:client`, then run
+`npm run deploy`. Verify the beacon request in the live browser. In Cloudflare,
+open **Analytics > Web Analytics > automaudio.dchs-music.com** to view reports.
+Counts start after installation and can be reduced by browser content blockers;
+visits are not a count of distinct people or completed mixes.
